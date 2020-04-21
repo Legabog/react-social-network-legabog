@@ -1,0 +1,96 @@
+.userphoto {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    padding: 10px;
+}
+
+.selectedPage {
+    font-weight: bold;
+}
+
+.followbutton {
+  display: inline-block;
+  padding: 10px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;  
+  background-color: rgba(0, 255, 55, 0.4);  
+  cursor: pointer;
+}
+
+.followbutton:focus {
+  outline: none;
+}
+
+.followbutton:active {
+  box-shadow: inset 2px 2px 1px rgba(0, 0, 0, .4);
+}
+
+.followbutton:disabled {
+  background: #ccc;
+  color: #000;
+  cursor: not-allowed;
+}
+
+.unfollowbutton {
+  display: inline-block;
+  padding: 10px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;  
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.4);  
+}
+
+.unfollowbutton:focus {
+  outline: none;
+}
+
+.unfollowbutton:active {
+  box-shadow: inset 2px 2px 1px rgba(0, 0, 0, .4);
+}
+
+.unfollowbutton:disabled {
+  background: #ccc;
+  color: #000;
+  cursor: not-allowed;
+}
+
+.shortinfo {
+  display: flex;
+}
+
+.usercard {
+  padding: 20px;
+  display: inline-block;
+  border: 2px solid rgb(124, 126, 122);
+  border-radius: 15px;
+  width: 370px;
+  background-color: rgb(109, 165, 167);
+  margin: 10px;  
+  margin-left: 50px;
+}
+
+.userslider {
+  padding: 10px;
+  margin-left: 300px;
+}
+
+.rootdiv {
+  display: block;
+}
+
+.cardsdiv {
+  border: 2px solid rgb(124, 126, 122);
+  margin: 10px;
+  background-color: rgba(0, 255, 55, 0.4);
+  border-radius: 30px;
+}
+
