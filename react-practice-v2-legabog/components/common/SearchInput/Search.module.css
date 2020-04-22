@@ -1,0 +1,14 @@
+.inputheader {
+    margin-left: 200px;
+    margin-top: 17px;
+
+}
+
+.inputheader input{
+    width: 300px;
+    border-radius: 20px;
+    background-image: url(https://vk.com/images/svg_icons/ic_head_loupe.svg);
+    background-repeat: no-repeat;
+    background-position: 10px 7px;
+    padding-left: 30px;
+}
