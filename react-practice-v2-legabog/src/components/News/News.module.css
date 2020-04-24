@@ -1,1 +1,40 @@
-12
+.newsCard {
+    padding: 20px;
+    display: block;
+    border: 2px solid rgb(124, 126, 122);
+    border-radius: 15px;
+    background-color: rgb(109, 165, 167);
+    margin: 20px;
+    width: 950px;
+}
+
+
+
+.newsHeader {
+    color: rgb(97, 97, 97);
+}
+
+
+.newsInfo {
+    display: block;
+}
+
+.newsInfo img{
+    border-radius: 30px;   
+    max-width: 900px; 
+    max-height: 500px;
+}
+
+.newsInfo p{
+    display: block;
+    font-size: 180%;
+}
+
+.optionCountries {
+    padding: 15px;
+}
+
+.optionCategories {
+    padding: 15px;
+}
+
