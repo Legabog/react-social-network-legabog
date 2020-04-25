@@ -1,5 +1,4 @@
 import * as axios from "axios";
-import { setCountry } from "../redux/news-reducer";
 
 const instance = axios.create({
   withCredentials: true,
