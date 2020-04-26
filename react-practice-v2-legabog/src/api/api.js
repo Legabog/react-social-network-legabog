@@ -17,6 +17,14 @@ export const userAPI = {
       });
   },
 
+  getProfileStatus(id) {
+    return instance.get(`profile/status/${id}`)
+    .then(response => {
+      return response.data
+    })
+
+  },
+  
   authMe() {
     return instance.get(`auth/me`).then((responce) => {
       return responce.data;
