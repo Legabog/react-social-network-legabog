@@ -1,17 +1,29 @@
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
 import profileReducer from "./profile-reducer";
 import dialogsReducer from "./dialogs-reducer";
 import navbarReducer from "./navbar-reducer";
-import usersReducer from './users-reducer'
+import usersReducer from "./users-reducer";
+import authReducer from "./auth-reducer";
+import newsReducer from "./news-reducer";
+import settingsReducer from "./settings-reducer";
+import headerReducer from "./header-reducer";
+import friendslistReducer from "./friendslist-reducer";
+import thunk from "redux-thunk";
 
 let reducers = combineReducers({
-    profileReducer, 
-    dialogsReducer, 
-    navbarReducer,
-    usersReducer
+  profileReducer,
+  dialogsReducer,
+  navbarReducer,
+  usersReducer,
+  authReducer,
+  newsReducer,
+  settingsReducer,
+  friendslistReducer,
+  headerReducer
 });
 
-let store = createStore(reducers);
+let store = createStore(reducers, applyMiddleware(thunk));
 
+window.store = store;
 
 export default store;
