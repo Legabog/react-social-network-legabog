@@ -63,12 +63,15 @@ export const toggleIsFetching = (isFetching) => {
 
 export const setTotalUsersCountThunk = () => {
   return (dispatch) => {
-    userAPI.getTotalUsersCount()
-    .then((response) => {
+    userAPI.getTotalUsersCount().then((response) => {
       dispatch(setTotalUsersCount(response.totalCount));
-    });
+    })
+    .then(() => {
+      getFriends(1, 100)
+    })
   };
 };
+
 
 export const getFriends = (
   page = initialState.currentPage,
