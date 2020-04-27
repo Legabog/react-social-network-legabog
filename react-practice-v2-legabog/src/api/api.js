@@ -17,6 +17,15 @@ export const userAPI = {
       });
   },
 
+  getTotalUsersCount() {
+    return instance
+      .get(`users?page=1&count=6`)
+      .then((responce) => {
+        return responce.data;
+      });
+  },
+
+
   getProfileStatus(id) {
     return instance.get(`profile/status/${id}`)
     .then(response => {
