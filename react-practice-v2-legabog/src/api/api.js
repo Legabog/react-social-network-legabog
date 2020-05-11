@@ -18,26 +18,39 @@ export const userAPI = {
   },
 
   getTotalUsersCount() {
-    return instance
-      .get(`users?page=1&count=6`)
-      .then((responce) => {
-        return responce.data;
-      });
+    return instance.get(`users?page=1&count=6`).then((responce) => {
+      return responce.data;
+    });
   },
-
 
   getProfileStatus(id) {
-    return instance.get(`profile/status/${id}`)
-    .then(response => {
-      return response.data
-    })
-
+    return instance.get(`profile/status/${id}`).then((response) => {
+      return response.data;
+    });
   },
-  
+
+  updateProfileStatus(status) {
+    return instance.put(`profile/status`, { status }).then((response) => {
+      return response.data;
+    });
+  },
+
   authMe() {
     return instance.get(`auth/me`).then((responce) => {
       return responce.data;
     });
+  },
+
+  login(email, password, rememberMe) {
+    return instance.post(`/auth/login`, {email, password, rememberMe}).then((response) => {
+      return response;
+    });
+  },
+
+  logout() {
+    return instance.post(`auth/logout`).then(response => {
+      return response
+    })
   },
 
   getProfile(userId) {
@@ -57,6 +70,7 @@ export const userAPI = {
       return responce.data;
     });
   },
+
   getNews(country, category) {
     return axios
       .get(
