@@ -1,4 +1,6 @@
 import * as axios from "axios";
+import { Redirect } from "react-router-dom";
+import React from "react"
 
 const instance = axios.create({
   withCredentials: true,
@@ -43,13 +45,13 @@ export const userAPI = {
 
   login(email, password, rememberMe) {
     return instance.post(`/auth/login`, {email, password, rememberMe}).then((response) => {
-      return response;
+      return <Redirect to={"/profile"}/>
     });
   },
 
   logout() {
     return instance.post(`auth/logout`).then(response => {
-      return response
+      return <Redirect to={"/profile"}/>
     })
   },
 
